@@ -727,6 +727,7 @@ LOGCHANNEL = Config.LOGCHANNEL
 try:
     if Config.USER_SESSION_STRING is None:
         raise KeyError
+
     LOGGER.info("Starting USER Session")
     userBot = Client(
         name="merge-bot-user",
@@ -736,7 +737,7 @@ try:
 
 except KeyError:
     userBot = None
-    LOGGER.warning("Nᴏ ᴜsᴇʀ sᴇssɪᴏɴ, Dᴇғᴀᴜʟᴛ ʙᴏᴛ sᴇssɪᴏɴ ᴡɪʟʟ ʙᴇ ᴜsᴇᴅ")
+    LOGGER.warning("No User Session, Default Bot session will be used")
 
 
 if __name__ == "__main__":
