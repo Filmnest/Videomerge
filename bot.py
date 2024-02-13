@@ -723,8 +723,7 @@ async def makeButtons(c: Client, m: Message, db: dict):
     return markup
 
 
-LOGGER.info(Config.USER_SESSION_STRING)
-
+LOGCHANNEL = Config.LOGCHANNEL
 try:
     if Config.USER_SESSION_STRING is None:
         raise KeyError
