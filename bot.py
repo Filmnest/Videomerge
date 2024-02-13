@@ -723,7 +723,9 @@ async def makeButtons(c: Client, m: Message, db: dict):
     return markup
 
 
-LOGCHANNEL = Config.LOGCHANNEL
+# Debugging statements to verify Config.USER_SESSION_STRING
+LOGGER.info("User Session String: %s", Config.USER_SESSION_STRING)
+
 try:
     if Config.USER_SESSION_STRING is None:
         raise KeyError
@@ -738,6 +740,7 @@ try:
 except KeyError:
     userBot = None
     LOGGER.warning("No User Session, Default Bot session will be used")
+
 
 
 if __name__ == "__main__":
