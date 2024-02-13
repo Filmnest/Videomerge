@@ -11,7 +11,6 @@ class Config(object):
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL")
     PASSWORD = os.environ.get("PASSWORD")
     DATABASE_URL = os.environ.get("mongodb+srv://devil:devil@cluster0.jpsbwpb.mongodb.net/?retryWrites=true&w=majority")
-    DATABASE_Name = os.environ.get("Cluster1")
     LOGCHANNEL = os.environ.get("LOGCHANNEL")  # Add channel id as -100 + Actual ID
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID","root")
     USER_SESSION_STRING = os.environ.get("USER_SESSION_STRING", None)
