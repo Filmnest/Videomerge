@@ -723,8 +723,7 @@ async def makeButtons(c: Client, m: Message, db: dict):
     return markup
 
 
-# Debugging statements to verify Config.USER_SESSION_STRING
-LOGGER.info("User Session String: %s", Config.USER_SESSION_STRING)
+LOGGER.info(Config.USER_SESSION_STRING)
 
 try:
     if Config.USER_SESSION_STRING is None:
