@@ -1,5 +1,5 @@
 from requests import get as rget
-from init import LOGGER
+from __init__ import LOGGER
 import os
 import subprocess
 from dotenv import load_dotenv
@@ -54,4 +54,4 @@ if UPSTREAM_REPO is not None:
     if update.returncode == 0:
         LOGGER.info('Successfully updated with latest commit from UPSTREAM_REPO')
     else:
-        LOGGER.warning('Something went wrong while updating, check UPSTREAM_REPO if valid or not!') solve this error and send me
+        LOGGER.warning('Something went wrong while updating, check UPSTREAM_REPO if valid or not!')
