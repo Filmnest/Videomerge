@@ -29,7 +29,7 @@
 [![Watch the video](https://img.youtube.com/vi/H-xVk_4zccs/hqdefault.jpg)](https://youtu.be/H-xVk_4zccs)
 
 ## Deploy(at your own risk) :
-<p><a href="https://heroku.com/deploy?template=https://github.com/BLVCK-ANGEL/Merge-Bot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
+<p><a href="https://heroku.com/deploy?template=https://github.com/Darkksoul/Videomerge"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
 
 ### OR
 Goto `settings > actions > secret > New Repository Secret` <br>
@@ -88,7 +88,7 @@ $ bash start.sh
 ## License
 ```
 Merge Bot, Telegram Video Merge Bot
-Copyright (c) 2021  Blvck Angel <https://github.com/BLVCK-ANGEL>
+Copyright (c) 2021  Blvck Angel <https://github.com/Darkksoul>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -106,7 +106,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 ## Credits
 
-- [Me](https://github.com/yashoswalyo) for [Nothing](https://github.com/yashoswalyo/MERGE-BOT) 😬
+- [Me](https://github.com/Darkksoul) for [Nothing](https://github.com/Darkksoul/Videomerge) 😬
 - [Dan](https://github.com/delivrance) for [Pyrogram](https://github.com/pyrogram/pyrogram) ❤️
 - [Abir Hasan](https://github.com/AbirHasan2005) for his wonderful [code](https://github.com/AbirHasan2005/VideoMerge-Bot) ❤️
 - [Jigarvarma2005](https://github.com/Jigarvarma2005) and [SpechIDE](https://t.me/spechide) for helping me to fix bugs 🤓
