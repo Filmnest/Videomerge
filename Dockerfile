@@ -17,6 +17,7 @@ COPY requirements.txt .
 
 # Create and activate a virtual environment
 RUN python3 -m venv venv
+RUN /bin/bash -c "source venv/bin/activate"
 
 # Install Python dependencies from requirements.txt using the pip executable within the virtual environment
 RUN venv/bin/pip3 install --no-cache-dir -r requirements.txt
