@@ -15,4 +15,3 @@ python-dotenv
 requests
 TgCrypto
 python-telegram-bot
-requests
