@@ -1,20 +1,32 @@
 FROM ubuntu:latest
 
+# Set working directory
 WORKDIR /usr/src/mergebot
+
+# Make the directory writable
 RUN chmod 777 /usr/src/mergebot
 
-RUN apt-get -y update && apt-get -y upgrade && apt-get install apt-utils -y && \
+# Update package lists and install necessary packages
+RUN apt-get -y update && apt-get -y upgrade && \
     apt-get install -y python3 python3-pip git \
     p7zip-full p7zip-rar xz-utils wget curl pv jq \
-    ffmpeg unzip neofetch mediainfo
+    ffmpeg unzip neofetch mediainfo python3-venv
 
-# RUN curl https://rclone.org/install.sh | bash
-
+# Copy requirements.txt into the container
 COPY requirements.txt .
+
+# Create and activate a virtual environment
+RUN python3 -m venv venv
+RUN /bin/bash -c "source venv/bin/activate"
+
+# Install Python dependencies from requirements.txt
 RUN pip3 install --no-cache-dir -r requirements.txt
 
+# Copy the rest of the application files into the container
 COPY . .
 
+# Set permissions for start.sh
 RUN chmod +x start.sh
 
-CMD ["bash","start.sh"]
+# Define the command to run the application
+CMD ["bash", "start.sh"]
