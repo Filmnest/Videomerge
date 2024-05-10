@@ -17,10 +17,9 @@ COPY requirements.txt .
 
 # Create and activate a virtual environment
 RUN python3 -m venv venv
-RUN . venv/bin/activate
 
-# Install Python dependencies from requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
+# Install Python dependencies from requirements.txt using the pip executable within the virtual environment
+RUN venv/bin/pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application files into the container
 COPY . .
