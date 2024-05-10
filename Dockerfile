@@ -15,12 +15,9 @@ RUN apt-get -y update && apt-get -y upgrade && \
 # Copy requirements.txt into the container
 COPY requirements.txt .
 
-# Create and activate a virtual environment
-RUN python3 -m venv venv
-RUN /bin/bash -c "source venv/bin/activate"
-
-# Install Python dependencies from requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
+# Create and activate a virtual environment, then install Python dependencies
+RUN python3 -m venv venv && \
+    /usr/src/mergebot/venv/bin/pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application files into the container
 COPY . .
