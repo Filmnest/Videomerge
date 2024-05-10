@@ -10,12 +10,16 @@ RUN chmod 777 /usr/src/mergebot
 RUN apt-get -y update && apt-get -y upgrade && \
     apt-get install -y python3 python3-pip git \
     p7zip-full p7zip-rar xz-utils wget curl pv jq \
-    ffmpeg unzip neofetch mediainfo
+    ffmpeg unzip neofetch mediainfo python3-venv
 
 # Copy requirements.txt into the container
 COPY requirements.txt .
 
-# Install Python dependencies
+# Create and activate a virtual environment
+RUN python3 -m venv venv
+RUN . venv/bin/activate
+
+# Install Python dependencies from requirements.txt
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application files into the container
