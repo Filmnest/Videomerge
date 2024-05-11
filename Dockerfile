@@ -1,10 +1,22 @@
 FROM ubuntu:latest
 
-# Update and install dependencies
-RUN apt-get update && apt-get install -y \
+# Update packages and install dependencies
+RUN apt-get update && \
+    apt-get install -y \
     python3 \
     python3-pip \
-    ffmpeg
+    ffmpeg \
+    p7zip-full \
+    p7zip-rar \
+    xz-utils \
+    wget \
+    curl \
+    pv \
+    jq \
+    unzip \
+    neofetch \
+    mediainfo && \
+    rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip
 RUN pip3 install -U pip
