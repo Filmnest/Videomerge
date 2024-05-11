@@ -18,8 +18,9 @@ RUN apt-get update && \
     mediainfo && \
     rm -rf /var/lib/apt/lists/*
 
-# Upgrade pip
-RUN pip3 install -U pip
+# Install pip using get-pip.py script
+RUN python3 -m ensurepip --default-pip && \
+    python3 -m pip install --upgrade pip setuptools wheel
 
 # Set working directory
 WORKDIR /usr/src/mergebot
